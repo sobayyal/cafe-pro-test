@@ -1,0 +1,244 @@
+/* assets/css/style.css */
+/* Main stylesheet for Cafe Management System */
+
+:root {
+    --primary: #854d0e;
+    --primary-subtle: rgba(133, 77, 14, 0.2);
+    --secondary: #3b82f6;
+    --accent: #f97316;
+    --warning: #f59e0b;
+    --success: #10b981;
+    --error: #ef4444;
+    --background-dark: #1e293b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar styles */
+.sidebar {
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link {
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.sidebar .nav-link.active {
+    border-left-color: var(--primary);
+}
+
+/* Card styles */
+.card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #714114;
+    border-color: #714114;
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Color utility classes */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+.text-error {
+    color: var(--error) !important;
+}
+
+.bg-primary-subtle {
+    background-color: var(--primary-subtle) !important;
+}
+
+/* Status badges */
+.badge-status {
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 600;
+    border-radius: 0.25rem;
+}
+
+.badge-completed {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-in-progress {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--secondary);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.badge-preparing {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.badge-pending {
+    background-color: rgba(107, 114, 128, 0.1);
+    color: #6b7280;
+    border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+/* Stat card */
+.stat-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+.stat-card .icon-primary {
+    background-color: rgba(133, 77, 14, 0.1);
+    color: var(--primary);
+}
+
+.stat-card .icon-secondary {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--secondary);
+}
+
+.stat-card .icon-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.stat-card .icon-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+/* Tables */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Menu items grid */
+.menu-item-card {
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.menu-item-card .icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+}
+
+/* Form styles */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(133, 77, 14, 0.25);
+}
+
+/* Login page */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-logo {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background-color: rgba(133, 77, 14, 0.2);
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+/* Utilities */
+.cursor-pointer {
+    cursor: pointer;
+}
